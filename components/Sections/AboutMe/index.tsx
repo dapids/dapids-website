@@ -50,7 +50,7 @@ export const AboutMe = () => {
             I'm a <Mark>Software Engineering</Mark> enthusiast with{' '}<Mark>{yearsOfExperience} years of experience</Mark> in the field and I'm especially passionate about clean code, functional programming, and engineering management.
           </Paragraph>
           <Paragraph>
-            I'm currently leading the super-talented Software Engineering team @ ProntoPro, building the best service marketplace in Europe.
+            I'm currently leading a super-talented Software Engineering team @ ProntoPro, building the best service marketplace in Europe.
           </Paragraph>
           <Paragraph>
             In my life, I lived in the following towns - in the following order: Angri 🇮🇹, Sant'Antonio Abate 🇮🇹, Urbino 🇮🇹, Camerino 🇮🇹, Reykjavik 🇮🇸, Kalisz 🇵🇱, Poznan 🇵🇱,

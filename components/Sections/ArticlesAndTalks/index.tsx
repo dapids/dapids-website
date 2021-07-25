@@ -51,6 +51,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 21/07/2021</span>
+      }
+      secondaryInformation={
+        <Link href="https://prontopro.engineering/blog/autonomous-decision-making-in-software-engineering" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="ProntoPro Engineering blog"
+      title="Autonomous decision-making in Software Engineering"
+    >
+      <>
+        <Paragraph>
+          How we foster autonomous decision-making in ProntoPro.
+        </Paragraph>
+
+        <Link href="https://prontopro.engineering/blog/autonomous-decision-making-in-software-engineering" target="_blank">
+          <Image alt="Decision-making flowchart" src="./article-decision-making-flowchart.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 03/07/2021</span>
       }
       secondaryInformation={
@@ -67,7 +90,7 @@ export const ArticlesAndTalks = () => (
         </Paragraph>
 
         <Link href="https://prontopro.engineering/blog/talent-pipeline-for-engineers" target="_blank">
-          <Image alt="Talent pipeline for Engineers" src="./talent-pipeline.jpg" />
+          <Image alt="Talent pipeline for Engineers" src="./article-talent-pipeline.jpg" />
         </Link>
       </>
     </SectionBlock>
