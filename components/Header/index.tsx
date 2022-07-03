@@ -85,13 +85,6 @@ export const Header = () => {
           </IconLink>
         </IconsContainer>
 
-        <div>
-          <Body as="span">Email:</Body>{' '}
-          <Body as="span" weight="500">
-            <Link href="mailto:me@davidsorrentino.com">me@davidsorrentino.com</Link>
-          </Body>
-        </div>
-
         <Body>Current location: Rome - Italy</Body>
       </Flex>
     </Container>
