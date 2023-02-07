@@ -51,7 +51,7 @@ export const Header = () => {
     <Container align="center" as="header" direction={direction} justify="space-between">
       <Flex align={leftAlign}>
         <Display as="h1"> David Sorrentino</Display>
-        <HeadingSmall as="h2">Head of Software Engineering @ {' '}
+        <HeadingSmall as="h2">Director of Engineering @ {' '}
           <HeadingSmall as="span" weight="500">
             <Link href="//www.prontopro.it" target="_blank">
               ProntoPro
