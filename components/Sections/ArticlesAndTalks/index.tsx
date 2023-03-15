@@ -51,6 +51,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 11/03/2023</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/situational-leadership-101-4591e76e65a5" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Situational leadership 101"
+    >
+      <>
+        <Paragraph>
+          What is situational leadership? Why is it important? How could we exploit it to make a positive impact in our organizations and communities?
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/situational-leadership-101-4591e76e65a5" target="_blank">
+          <Image alt="Supportive and directive behavior in different leadership styles" src="./article-situational-leadership-chart.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 21/07/2021</span>
       }
       secondaryInformation={
