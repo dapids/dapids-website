@@ -19,4 +19,4 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
   }
-`
+` as any

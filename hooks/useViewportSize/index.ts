@@ -12,7 +12,7 @@ const getViewportSize = (width: number) => {
 export const useViewportSize = () => {
   const [viewportSize, setViewportSize] = useState<ReturnType<typeof getViewportSize>>('small')
 
-  const updateViewportSize = useCallback(
+  const updateViewportSize: EventListener = useCallback(
     debounce(() => {
       const size = getViewportSize(window.innerWidth)
 

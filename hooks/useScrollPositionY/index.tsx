@@ -1,23 +1,23 @@
 import { useCallback, useEffect, useState } from 'react'
 import { debounce } from 'ts-debounce'
 
-const isWindowScrolled = () => (typeof window === 'undefined' ? 0 : window.scrollY)
+const getWindowScroll = () => typeof window === 'undefined' ? 0 : self.scrollY
 
 export const useScrollPositionY = () => {
-  const [scrollPositionY, setScrollPositionY] = useState(isWindowScrolled())
+  const [scrollPositionY, setScrollPositionY] = useState(getWindowScroll())
 
-  const onScroll = useCallback(
+  const onScroll: EventListener = useCallback(
     debounce(() => {
-      setScrollPositionY(isWindowScrolled())
+      setScrollPositionY(getWindowScroll())
     }, 50),
     [],
   )
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll)
+    self.addEventListener('scroll', onScroll)
 
     return () => {
-      window.removeEventListener('scroll', onScroll)
+      self.removeEventListener('scroll', onScroll)
     }
   }, [])
 
