@@ -17,7 +17,7 @@ export const Experience = () => (
       primaryInformation="2021 - now"
       secondaryInformation="Rome, Italy"
       subtitle="ProntoPro"
-      title="Head of Software Engineering"
+      title="Director of Engineering"
     >
       <>
         <Paragraph first>
