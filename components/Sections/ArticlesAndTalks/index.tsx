@@ -51,6 +51,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 10/05/2023</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/the-importance-of-being-a-good-communicator-65a6737fa071" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Communication 101"
+    >
+      <>
+        <Paragraph>
+          Some basic knowledge and best practices that helped me become a better communicator.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/the-importance-of-being-a-good-communicator-65a6737fa071" target="_blank">
+          <Image alt="People communicating" src="./article-communication-101.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 11/03/2023</span>
       }
       secondaryInformation={
