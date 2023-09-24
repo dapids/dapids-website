@@ -43,7 +43,7 @@ export const Experience = () => (
     </SectionBlock>
 
     <SectionBlock
-      primaryInformation="2018 – 2021"
+      primaryInformation="2018 - 2021"
       secondaryInformation="Rome, Italy"
       subtitle="ProntoPro"
       title="Tech Lead"
@@ -72,7 +72,7 @@ export const Experience = () => (
     </SectionBlock>
 
     <SectionBlock
-      primaryInformation="2017 – 2021"
+      primaryInformation="2017 - 2021"
       secondaryInformation="Milan, Italy"
       subtitle="ProntoPro"
       title="Frontend Lead"

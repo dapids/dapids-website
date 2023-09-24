@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 export const Footer = () => (
   <Wrapper>
     <Caption as="span" weight="400">
-      Backed with ❤️, TypeScript, React, styled-components, Next.js. Hosted on Vercel.
+      This website was backed with ❤️, TypeScript, React, styled-components, and Next.js.
     </Caption>
   </Wrapper>
 )

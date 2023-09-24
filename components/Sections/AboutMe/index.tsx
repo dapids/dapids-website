@@ -47,7 +47,7 @@ export const AboutMe = () => {
         <Flex grow="1" shrink="1">
           <Paragraph>Hi! My name is David. 👋🏻</Paragraph>
           <Paragraph>
-            I'm a <Mark>Software Engineering</Mark> enthusiast with{' '}<Mark>{yearsOfExperience} years of experience</Mark> in the field and I'm especially passionate about clean code, functional programming, and engineering management.
+            I'm a <Mark>Software Engineer</Mark> with{' '}<Mark>{yearsOfExperience} years of experience</Mark> in the field and I'm especially passionate about clean code, functional programming, and engineering management.
           </Paragraph>
           <Paragraph>
             I'm currently leading a super-talented Engineering team @ ProntoPro, building the best service marketplace in Europe.

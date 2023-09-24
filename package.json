@@ -8,11 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.4.0",
-    "@fortawesome/free-brands-svg-icons": "6.4.0",
-    "@fortawesome/free-solid-svg-icons": "6.4.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.2",
+    "@fortawesome/free-brands-svg-icons": "6.4.2",
+    "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "next": "13.4.4",
+    "next": "13.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "5.3.11",
@@ -20,9 +20,9 @@
   },
   "devDependencies": {
     "@types/next": "9.0.0",
-    "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
-    "@types/styled-components": "5.1.26",
-    "typescript": "5.0.4"
+    "@types/node": "20.6.3",
+    "@types/react": "18.2.22",
+    "@types/styled-components": "5.1.27",
+    "typescript": "5.2.2"
   }
 }
