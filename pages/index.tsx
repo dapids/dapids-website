@@ -1,9 +1,8 @@
-import { ThemeProvider } from 'styled-components'
+import { StyleSheetManager, ThemeProvider } from 'styled-components'
 import { BackToTop } from 'components/BackToTop'
 import { Container } from 'components/Container'
 import { Footer } from 'components/Footer'
 import { darkTheme, lightTheme, GlobalStyle } from 'components/GlobalStyle'
-import { Head } from 'components/Head'
 import { Header } from 'components/Header'
 import { Menu } from 'components/Menu'
 import { AboutMe } from 'components/Sections/AboutMe'
@@ -11,7 +10,7 @@ import { Education } from 'components/Sections/Education'
 import { Experience } from 'components/Sections/Experience'
 import { ArticlesAndTalks } from 'components/Sections/ArticlesAndTalks'
 import { SwitchTheme } from 'components/SwitchTheme'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export async function getStaticProps() {
   return {
@@ -19,34 +18,45 @@ export async function getStaticProps() {
   }
 }
 
+const shouldForwardProp = (prop: string) => ![
+  'active',
+  'align',
+  'first',
+  'last',
+  'scrolled',
+  'small',
+].includes(prop)
+
 export default function Home() {
   const [themeIsDark, setThemeIsDark] = useState(false)
 
   return (
-    <ThemeProvider theme={themeIsDark ? darkTheme : lightTheme}>
-      <GlobalStyle />
+    <React.StrictMode>
+      <StyleSheetManager shouldForwardProp={shouldForwardProp}>
+        <ThemeProvider theme={themeIsDark ? darkTheme : lightTheme}>
+          <GlobalStyle />
 
-      <Head />
+          <Menu />
 
-      <Menu />
+          <Container>
+            <Header />
 
-      <Container>
-        <Header />
+            <AboutMe />
 
-        <AboutMe />
+            <Experience />
 
-        <Experience />
+            <Education />
 
-        <Education />
+            <ArticlesAndTalks />
 
-        <ArticlesAndTalks />
+            <Footer />
+          </Container>
 
-        <Footer />
-      </Container>
+          <BackToTop />
 
-      <BackToTop />
-
-      <SwitchTheme onTap={() => setThemeIsDark(!themeIsDark)}/>
-    </ThemeProvider>
+          <SwitchTheme onTap={() => setThemeIsDark(!themeIsDark)}/>
+        </ThemeProvider>
+      </StyleSheetManager>
+    </React.StrictMode>
   )
 }

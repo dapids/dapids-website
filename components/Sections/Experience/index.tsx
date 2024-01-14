@@ -4,9 +4,13 @@ import { SectionTitle } from 'components/SectionTitle'
 import { Mark } from 'components/Typography/Mark'
 import styled from 'styled-components'
 
-const Paragraph = styled.div`
+type ParagraphProps = {
+  first?: boolean
+}
+
+const Paragraph = styled.div<ParagraphProps>`
   margin-bottom: 0;
-  margin-top: ${({ first }: { first?: boolean }) => (first ? '0' : '16px')};
+  margin-top: ${({ first }) => (first ? '0' : '16px')};
 `
 
 export const Experience = () => (

@@ -1,4 +1,4 @@
-import { faFacebook, faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faInstagram, faLinkedin, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Flex } from 'components/Flex'
 import { Link } from 'components/Link'
@@ -16,7 +16,11 @@ const IconsContainer = styled(Flex)`
   margin: 24px 0;
 `
 
-const IconLink = styled(Link)`
+type IconLinkProps = {
+  small: boolean
+}
+
+const IconLink = styled(Link)<IconLinkProps>`
   align-items: center;
   border: 2px solid #e6e6e6;
   border-radius: 50%;
@@ -27,7 +31,7 @@ const IconLink = styled(Link)`
   height: 55px;
   justify-content: center;
   line-height: 55px;
-  margin: ${({ small }: { small: boolean }) => (small ? '0 8px' : '0 0 0 16px')};
+  margin: ${({ small }) => (small ? '0 8px' : '0 0 0 16px')};
   transition: all 0.3s;
   width: 55px;
 
@@ -66,14 +70,14 @@ export const Header = () => {
           <IconLink href="//github.com/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faGithub} size="3x" />
           </IconLink>
-          <IconLink href="//facebook.com/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faFacebook} size="3x" />
+          <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
+            <Icon icon={faLinkedin} size="3x" />
           </IconLink>
           <IconLink href="//instagram.com/dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faInstagram} size="3x" />
           </IconLink>
-          <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faLinkedin} size="3x" />
+          <IconLink href="//threads.net/@dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
+            <Icon icon={faThreads} size="3x" />
           </IconLink>
           <IconLink
             href="//twitter.com/dapidsorrentino"
@@ -81,7 +85,7 @@ export const Header = () => {
             small={viewportSize === 'small'}
             target="_blank"
           >
-            <Icon icon={faTwitter} size="3x" />
+            <Icon icon={faXTwitter} size="3x" />
           </IconLink>
         </IconsContainer>
 
