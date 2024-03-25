@@ -1,4 +1,4 @@
-import { faGithub, faInstagram, faLinkedin, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faInstagram, faLinkedin, faMedium, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Flex } from 'components/Flex'
 import { Link } from 'components/Link'
@@ -72,6 +72,9 @@ export const Header = () => {
           </IconLink>
           <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faLinkedin} size="3x" />
+          </IconLink>
+          <IconLink href="//medium.com/@dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
+            <Icon icon={faMedium} size="3x" />
           </IconLink>
           <IconLink href="//instagram.com/dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faInstagram} size="3x" />
