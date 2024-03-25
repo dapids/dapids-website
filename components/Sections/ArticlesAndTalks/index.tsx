@@ -51,6 +51,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 23/03/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/1-1-meetings-best-practices-for-talents-and-managers-bb90c68139f0" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="1:1 meetings best practices for talents and managers"
+    >
+      <>
+        <Paragraph>
+          Best practices about 1:1 meetings. In the article, I try to reverse the usual point of view on this topic, focusing on talents as the main audience.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/1-1-meetings-best-practices-for-talents-and-managers-bb90c68139f0" target="_blank">
+          <Image alt="Two people having a 1:1 meeting" src="./article-1-1-meetings-best-practices-for-talents-and-managers.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 10/05/2023</span>
       }
       secondaryInformation={
@@ -67,7 +90,7 @@ export const ArticlesAndTalks = () => (
         </Paragraph>
 
         <Link href="https://medium.com/@dapids17/the-importance-of-being-a-good-communicator-65a6737fa071" target="_blank">
-          <Image alt="People communicating" src="./article-communication-101.jpg" />
+          <Image alt="Two people having a conversation" src="./article-communication-101.jpg" />
         </Link>
       </>
     </SectionBlock>
