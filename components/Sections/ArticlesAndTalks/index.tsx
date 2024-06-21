@@ -1,10 +1,15 @@
 import { faCalendarAlt, faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { YouTubeEmbed } from '@next/third-parties/google'
+import styled from 'styled-components'
 import { Link as LinkBase } from 'components/Link'
 import { SectionBlock } from 'components/SectionBlock'
 import { SectionTitle } from 'components/SectionTitle'
 import { Body } from 'components/Typography/Body'
-import styled from 'styled-components'
+
+export default function Page() {
+  return <YouTubeEmbed videoid="ogfYd705cRs" height={400} params="controls=0" />
+}
 
 const Paragraph = styled(Body).attrs({
   weight: '400',
@@ -23,26 +28,6 @@ const Image = styled.img`
 
 const Link = styled(LinkBase)`
   text-decoration: underline;
-`
-
-const Video = styled.div`
-  overflow: hidden;
-  position: relative;
-  width:100%;
-
-  ::after {
-    content: '';
-    display: block;
-    padding-top: 56.25%;
-  }
-
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
 `
 
 export const ArticlesAndTalks = () => (
@@ -228,16 +213,7 @@ export const ArticlesAndTalks = () => (
           The talk is in Italian. <Link href="https://docs.google.com/presentation/d/185CijvlYu9Ia5ZT0pDnKhnzCQ96JS2zm3juGNYj2Qcw/" target="_blank">Slides</Link> are in English.
         </Paragraph>
 
-        <Video>
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            frameBorder="0"
-            height="315"
-            src="https://www.youtube.com/embed/bJujIiTK5PQ?start=579"
-            width="560"
-          ></iframe>
-        </Video>
+        <YouTubeEmbed videoid="bJujIiTK5PQ" height={400} width={720} params="controls=0&start=579" />
       </>
     </SectionBlock>
 
@@ -259,16 +235,7 @@ export const ArticlesAndTalks = () => (
           Designers and developers tend to look at UI components with different eyes. In this talk I share the role React had in ProntoPro in aligning their points of view.
         </Paragraph>
 
-        <Video>
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            frameBorder="0"
-            height="315"
-            src="https://www.youtube.com/embed/J74_lvROKqc"
-            width="560"
-          ></iframe>
-        </Video>
+        <YouTubeEmbed videoid="J74_lvROKqc" height={400} width={720} params="controls=0" />
       </>
     </SectionBlock>
   </>
