@@ -51,6 +51,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 21/06/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/sorting-motivators-a-powerful-management-tool-ae7ac4194e7d" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Sorting Motivators: a powerful management tool"
+    >
+      <>
+        <Paragraph>
+          A management tool that helps understand what intrinsically motivates our talents, improving communication, increasing engagement, and lower ing burnout.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/sorting-motivators-a-powerful-management-tool-ae7ac4194e7d" target="_blank">
+          <Image alt="People working on improving their motivation" src="./article-sorting-motivators.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 23/03/2024</span>
       }
       secondaryInformation={
