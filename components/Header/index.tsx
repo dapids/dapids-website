@@ -1,5 +1,6 @@
 import { faGithub, faInstagram, faLinkedin, faMedium, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import { Flex } from 'components/Flex'
 import { Link } from 'components/Link'
 import { Body } from 'components/Typography/Body'
@@ -67,14 +68,17 @@ export const Header = () => {
 
       <Flex align={rightAlign}>
         <IconsContainer direction="row">
-          <IconLink href="//github.com/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faGithub} size="3x" />
+          <IconLink href="//koalendar.com/e/meet-with-dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
+            <Icon icon={faCalendarCheck} size="3x" />
           </IconLink>
           <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faLinkedin} size="3x" />
           </IconLink>
           <IconLink href="//medium.com/@dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faMedium} size="3x" />
+          </IconLink>
+          <IconLink href="//github.com/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
+            <Icon icon={faGithub} size="3x" />
           </IconLink>
           <IconLink href="//instagram.com/dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
             <Icon icon={faInstagram} size="3x" />
