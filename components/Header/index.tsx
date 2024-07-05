@@ -29,12 +29,12 @@ const IconLink = styled(Link)<IconLinkProps>`
   box-shadow: inset 0 0 0 0px #222;
   color: #222;
   display: flex;
-  height: 55px;
+  height: ${({ small }) => (small ? '40px' : '55px')};
   justify-content: center;
-  line-height: 55px;
-  margin: ${({ small }) => (small ? '0 8px' : '0 0 0 16px')};
+  line-height: ${({ small }) => (small ? '40px' : '55px')};
+  margin: ${({ small }) => (small ? '0 4px' : '0 0 0 16px')};
   transition: all 0.3s;
-  width: 55px;
+  width: ${({ small }) => (small ? '40px' : '55px')};
 
   &:hover {
     box-shadow: inset 0 0 0 35px #222;
@@ -48,9 +48,11 @@ const Icon = styled(FontAwesomeIcon)`
 
 export const Header = () => {
   const viewportSize = useViewportSize()
-  const direction = viewportSize === 'small' ? 'column' : 'row'
-  const leftAlign = viewportSize === 'small' ? 'center' : 'flex-start'
-  const rightAlign = viewportSize === 'small' ? 'center' : 'flex-end'
+  const small = viewportSize === 'small'
+  const direction = small ? 'column' : 'row'
+  const leftAlign = small ? 'center' : 'flex-start'
+  const rightAlign = small ? 'center' : 'flex-end'
+  const iconSize = small ? '1x' : '3x'
 
   return (
     <Container align="center" as="header" direction={direction} justify="space-between">
@@ -68,31 +70,31 @@ export const Header = () => {
 
       <Flex align={rightAlign}>
         <IconsContainer direction="row">
-          <IconLink href="//koalendar.com/e/meet-with-dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faCalendarCheck} size="3x" />
+          <IconLink href="//koalendar.com/e/meet-with-dapids" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faCalendarCheck} size={iconSize} />
           </IconLink>
-          <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faLinkedin} size="3x" />
+          <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faLinkedin} size={iconSize} />
           </IconLink>
-          <IconLink href="//medium.com/@dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faMedium} size="3x" />
+          <IconLink href="//medium.com/@dapids17" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faMedium} size={iconSize} />
           </IconLink>
-          <IconLink href="//github.com/dapids" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faGithub} size="3x" />
+          <IconLink href="//github.com/dapids" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faGithub} size={iconSize} />
           </IconLink>
-          <IconLink href="//instagram.com/dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faInstagram} size="3x" />
+          <IconLink href="//instagram.com/dapids17" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faInstagram} size={iconSize} />
           </IconLink>
-          <IconLink href="//threads.net/@dapids17" rel="nofollow" small={viewportSize === 'small'} target="_blank">
-            <Icon icon={faThreads} size="3x" />
+          <IconLink href="//threads.net/@dapids17" rel="nofollow" small={small} target="_blank">
+            <Icon icon={faThreads} size={iconSize} />
           </IconLink>
           <IconLink
             href="//twitter.com/dapidsorrentino"
             rel="nofollow"
-            small={viewportSize === 'small'}
+            small={small}
             target="_blank"
           >
-            <Icon icon={faXTwitter} size="3x" />
+            <Icon icon={faXTwitter} size={iconSize} />
           </IconLink>
         </IconsContainer>
 

@@ -27,9 +27,9 @@ export const Experience = () => (
         <Paragraph first>
           Responsibilities:
           <List>
-            <li>Shaping technology strategy</li>
+            <li>Shape the technology strategy</li>
             <li>
-              <Mark>Attracting and mentoring talented Software Engineers</Mark>
+              <Mark>Attract and mentor talented Software Engineers</Mark>
             </li>
             <li>Supervise architectural decisions</li>
             <li>Improve and innovate the product development workflow</li>
@@ -38,9 +38,10 @@ export const Experience = () => (
         <Paragraph>
           Technology:
           <List>
-            <li>React, Next.js, NodeJS, ExpressJS, Symfony</li>
-            <li>Docker, Kubernetes, Helm</li>
-            <li>TypeScript, PHP, Go</li>
+            <li>TypeScript, Go</li>
+            <li>React, React Native, Next.js, Snowplow</li>
+            <li>PostgreSQL, Snowflake</li>
+            <li>Docker, AWS</li>
           </List>
         </Paragraph>
       </>
