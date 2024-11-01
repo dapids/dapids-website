@@ -51,7 +51,7 @@ export const Experience = () => (
       primaryInformation="2018 - 2021"
       secondaryInformation="Rome, Italy"
       subtitle="ProntoPro"
-      title="Tech Lead"
+      title="Technical Lead"
     >
       <>
         <Paragraph first>
@@ -142,11 +142,9 @@ export const Experience = () => (
         <Paragraph first>
           Responsibilities:
           <List>
-            <li>Design and develop websites and web applications</li>
-            <li>Manage projects and teams with Scrum methodologies</li>
-            <li>
-              <Mark>Hire and train</Mark>
-            </li>
+            <li>Provide tech consulting on website and app development for startups</li>
+            <li><Mark>Advise on technology strategy, architecture, and tool selection to support growth</Mark></li>
+            <li>Conduct workshops on agile development and best practices for digital products</li>
           </List>
         </Paragraph>
         <Paragraph>
@@ -219,7 +217,7 @@ export const Experience = () => (
       primaryInformation="2013 - 2016"
       secondaryInformation="Ancona, Italy"
       subtitle="WeBox Studio"
-      title="Tech Lead"
+      title="Technical Lead"
     >
       <>
         <Paragraph first>
@@ -253,10 +251,10 @@ export const Experience = () => (
         <Paragraph first>
           Responsibilities:
           <List>
-            <li>
-              <Mark>Design and develop websites</Mark>
-            </li>
-            <li>Perform business requirements analysis</li>
+          <List>
+            <li><Mark>Provide tech consulting on website and app development for startups</Mark></li>
+            <li>Conduct workshops on agile development and best practices for digital products</li>
+          </List>
           </List>
         </Paragraph>
         <Paragraph>

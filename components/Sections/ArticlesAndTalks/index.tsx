@@ -36,6 +36,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 23/10/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/codemotion-2024-a-journey-of-inspiration-insights-and-community-b2451f340d8f" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Codemotion 2024: a journey of inspiration, insights, and community"
+    >
+      <>
+        <Paragraph>
+          My notes about the October 2024 Codemotion conference in Milan.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/codemotion-2024-a-journey-of-inspiration-insights-and-community-b2451f340d8f" target="_blank">
+          <Image alt="People working on improving their motivation" src="./article-codemotion-2024.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 21/06/2024</span>
       }
       secondaryInformation={
