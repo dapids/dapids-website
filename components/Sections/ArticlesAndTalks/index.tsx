@@ -36,6 +36,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 02/11/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/building-a-user-behavior-tracking-and-analytics-platform-c1b14453bf34" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Building a user-behavior tracking and analytics platform: key components and insights"
+    >
+      <>
+        <Paragraph>
+          A journey through key building blocks for setting up a user behavior tracking and analytics platform, adaptable to any tech stack and best practices.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/building-a-user-behavior-tracking-and-analytics-platform-c1b14453bf34" target="_blank">
+          <Image alt="A person working on a user behavior analysis." src="./article-building-a-user-behavior-tracking-and-analytics-platform.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 23/10/2024</span>
       }
       secondaryInformation={
