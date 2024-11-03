@@ -7,10 +7,6 @@ import { SectionBlock } from 'components/SectionBlock'
 import { SectionTitle } from 'components/SectionTitle'
 import { Body } from 'components/Typography/Body'
 
-export default function Page() {
-  return <YouTubeEmbed videoid="ogfYd705cRs" height={400} params="controls=0" />
-}
-
 const Paragraph = styled(Body).attrs({
   weight: '400',
 })`
@@ -28,6 +24,10 @@ const Image = styled.img`
 
 const Link = styled(LinkBase)`
   text-decoration: underline;
+`
+
+const VideoContainer = styled.div`
+  width: 100%;
 `
 
 export const ArticlesAndTalks = () => (
@@ -259,7 +259,9 @@ export const ArticlesAndTalks = () => (
           The talk is in Italian. <Link href="https://docs.google.com/presentation/d/185CijvlYu9Ia5ZT0pDnKhnzCQ96JS2zm3juGNYj2Qcw/" target="_blank">Slides</Link> are in English.
         </Paragraph>
 
-        <YouTubeEmbed videoid="bJujIiTK5PQ" height={400} width={720} params="controls=0&start=579" />
+        <VideoContainer>
+          <YouTubeEmbed videoid="bJujIiTK5PQ" params="controls=0&start=579" />
+        </VideoContainer>
       </>
     </SectionBlock>
 
@@ -281,7 +283,9 @@ export const ArticlesAndTalks = () => (
           Designers and developers tend to look at UI components with different eyes. In this talk I share the role React had in ProntoPro in aligning their points of view.
         </Paragraph>
 
-        <YouTubeEmbed videoid="J74_lvROKqc" height={400} width={720} params="controls=0" />
+        <VideoContainer>
+          <YouTubeEmbed videoid="J74_lvROKqc" params="controls=0" />
+        </VideoContainer>
       </>
     </SectionBlock>
   </>
