@@ -36,6 +36,29 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 17/11/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/demystifying-deadlines-the-balancing-act-between-perfect-and-done-5d6e159c9b27" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Demystifying deadlines: the balancing act between perfect and done"
+    >
+      <>
+        <Paragraph>
+          How deadlines have helped me balance perfection and progress in software engineering, driving focus, prioritization, and delivery.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/demystifying-deadlines-the-balancing-act-between-perfect-and-done-5d6e159c9b27" target="_blank">
+          <Image alt="A person standing on one leg and trying to balance." src="./article-demystifying-deadlines-the-balancing-act-between-perfect-and-done.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 02/11/2024</span>
       }
       secondaryInformation={
