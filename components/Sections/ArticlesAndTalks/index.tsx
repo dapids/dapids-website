@@ -1,10 +1,11 @@
 import { faCalendarAlt, faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { YouTubeEmbed } from '@next/third-parties/google'
+import styled from 'styled-components'
 import { Link as LinkBase } from 'components/Link'
 import { SectionBlock } from 'components/SectionBlock'
 import { SectionTitle } from 'components/SectionTitle'
 import { Body } from 'components/Typography/Body'
-import styled from 'styled-components'
 
 const Paragraph = styled(Body).attrs({
   weight: '400',
@@ -25,29 +26,105 @@ const Link = styled(LinkBase)`
   text-decoration: underline;
 `
 
-const Video = styled.div`
-  overflow: hidden;
-  position: relative;
-  width:100%;
-
-  ::after {
-    content: '';
-    display: block;
-    padding-top: 56.25%;
-  }
-
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+const VideoContainer = styled.div`
+  width: 100%;
 `
 
 export const ArticlesAndTalks = () => (
   <>
     <SectionTitle>Articles &amp; talks</SectionTitle>
+
+    <SectionBlock
+      primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 17/11/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/demystifying-deadlines-the-balancing-act-between-perfect-and-done-5d6e159c9b27" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Demystifying deadlines: the balancing act between perfect and done"
+    >
+      <>
+        <Paragraph>
+          How deadlines have helped me balance perfection and progress in software engineering, driving focus, prioritization, and delivery.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/demystifying-deadlines-the-balancing-act-between-perfect-and-done-5d6e159c9b27" target="_blank">
+          <Image alt="A person standing on one leg and trying to balance." src="./article-demystifying-deadlines-the-balancing-act-between-perfect-and-done.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 02/11/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/building-a-user-behavior-tracking-and-analytics-platform-c1b14453bf34" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Building a user-behavior tracking and analytics platform: key components and insights"
+    >
+      <>
+        <Paragraph>
+          A journey through key building blocks for setting up a user behavior tracking and analytics platform, adaptable to any tech stack and best practices.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/building-a-user-behavior-tracking-and-analytics-platform-c1b14453bf34" target="_blank">
+          <Image alt="A person working on a user behavior analysis." src="./article-building-a-user-behavior-tracking-and-analytics-platform.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 23/10/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/codemotion-2024-a-journey-of-inspiration-insights-and-community-b2451f340d8f" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Codemotion 2024: a journey of inspiration, insights, and community"
+    >
+      <>
+        <Paragraph>
+          My notes about the October 2024 Codemotion conference in Milan.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/codemotion-2024-a-journey-of-inspiration-insights-and-community-b2451f340d8f" target="_blank">
+          <Image alt="People working on improving their motivation" src="./article-codemotion-2024.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 21/06/2024</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/sorting-motivators-a-powerful-management-tool-ae7ac4194e7d" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Sorting Motivators: a powerful management tool"
+    >
+      <>
+        <Paragraph>
+          A management tool that helps understand what intrinsically motivates our talents, improving communication, increasing engagement, and lower ing burnout.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/sorting-motivators-a-powerful-management-tool-ae7ac4194e7d" target="_blank">
+          <Image alt="People working on improving their motivation" src="./article-sorting-motivators.jpg" />
+        </Link>
+      </>
+    </SectionBlock>
 
     <SectionBlock
       primaryInformation={
@@ -205,16 +282,9 @@ export const ArticlesAndTalks = () => (
           The talk is in Italian. <Link href="https://docs.google.com/presentation/d/185CijvlYu9Ia5ZT0pDnKhnzCQ96JS2zm3juGNYj2Qcw/" target="_blank">Slides</Link> are in English.
         </Paragraph>
 
-        <Video>
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            frameBorder="0"
-            height="315"
-            src="https://www.youtube.com/embed/bJujIiTK5PQ?start=579"
-            width="560"
-          ></iframe>
-        </Video>
+        <VideoContainer>
+          <YouTubeEmbed videoid="bJujIiTK5PQ" params="controls=0&start=579" />
+        </VideoContainer>
       </>
     </SectionBlock>
 
@@ -236,16 +306,9 @@ export const ArticlesAndTalks = () => (
           Designers and developers tend to look at UI components with different eyes. In this talk I share the role React had in ProntoPro in aligning their points of view.
         </Paragraph>
 
-        <Video>
-          <iframe
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            frameBorder="0"
-            height="315"
-            src="https://www.youtube.com/embed/J74_lvROKqc"
-            width="560"
-          ></iframe>
-        </Video>
+        <VideoContainer>
+          <YouTubeEmbed videoid="J74_lvROKqc" params="controls=0" />
+        </VideoContainer>
       </>
     </SectionBlock>
   </>

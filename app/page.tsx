@@ -1,3 +1,4 @@
+'use client'
 import { StyleSheetManager, ThemeProvider } from 'styled-components'
 import { BackToTop } from 'components/BackToTop'
 import { Container } from 'components/Container'
@@ -11,12 +12,6 @@ import { Experience } from 'components/Sections/Experience'
 import { ArticlesAndTalks } from 'components/Sections/ArticlesAndTalks'
 import { SwitchTheme } from 'components/SwitchTheme'
 import React, { useState } from 'react'
-
-export async function getStaticProps() {
-  return {
-    props: {},
-  }
-}
 
 const shouldForwardProp = (prop: string) => ![
   'active',

@@ -93,7 +93,7 @@ type Section = {
   anchor: string
   id: string
   label: string
-  element: HTMLElement
+  element: HTMLElement | null
 }
 
 export const Menu = () => {
@@ -122,7 +122,7 @@ export const Menu = () => {
   }
 
   const currentSection = sections
-    .filter(({ element }) => scrollPositionY >= element.getBoundingClientRect().top - 2 + scrollPositionY)
+    .filter(({ element }) => element ? scrollPositionY >= element.getBoundingClientRect().top - 2 + scrollPositionY : scrollPositionY)
     .reverse()[0]
 
   return (
