@@ -36,6 +36,52 @@ export const ArticlesAndTalks = () => (
 
     <SectionBlock
       primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 06/01/2026</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/the-art-of-scope-hammering-baselines-yagni-inversions-and-deadlines-to-build-less-and-ship-9248edbd4535" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="The art of scope hammering: baselines, YAGNI, inversions, and deadlines to build less and ship smarter"
+    >
+      <>
+        <Paragraph>
+          Techniques and strategies to effectively manage project scope in software development, focusing on delivering value by building less and shipping smarter through baselines, YAGNI principles, inversions, and deadlines.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/the-art-of-scope-hammering-baselines-yagni-inversions-and-deadlines-to-build-less-and-ship-9248edbd4535" target="_blank">
+          <Image alt="" src="./the-art-of-scope-hammering.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
+        <span><Icon icon={faCalendarAlt} /> 15/11/2025</span>
+      }
+      secondaryInformation={
+        <Link href="https://medium.com/@dapids17/modern-qa-from-gatekeepers-to-enablers-5929107e43a6" target="_blank">
+          <Icon icon={faLink} /> Link to the article
+        </Link>
+      }
+      subtitle="Medium"
+      title="Modern QA: from gatekeepers to enablers"
+    >
+      <>
+        <Paragraph>
+          A modern approach to Quality Assurance that transforms QA teams from gatekeepers into enablers of software excellence, fostering collaboration, continuous improvement, and innovation.
+        </Paragraph>
+
+        <Link href="https://medium.com/@dapids17/modern-qa-from-gatekeepers-to-enablers-5929107e43a6" target="_blank">
+          <Image alt="" src="./moden-qa-from-gatekeepers-to-enablers.webp" />
+        </Link>
+      </>
+    </SectionBlock>
+
+    <SectionBlock
+      primaryInformation={
         <span><Icon icon={faCalendarAlt} /> 17/11/2024</span>
       }
       secondaryInformation={
