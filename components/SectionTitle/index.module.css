@@ -12,7 +12,7 @@
 
 .heading::before,
 .heading::after {
-  content: '';
+  content: "";
   left: 0;
   position: absolute;
   width: 100%;

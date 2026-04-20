@@ -1,11 +1,11 @@
 .pictureWrapper {
   margin: 0 auto 32px;
   padding: 0 40px;
-  shrink: 0;
+  flex-shrink: 0;
 }
 
 .picture {
-  background-image: url('/my-picture.jpg');
+  background-image: url("/me.png");
   background-position: center;
   background-repeat: repeat, no-repeat;
   background-size: cover;

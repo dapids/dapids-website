@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import styles from './index.module.css'
 
 type Props = {
@@ -8,7 +8,5 @@ type Props = {
 }
 
 export const Heading = ({ as: Component = 'div', children, className = '' }: Props) => (
-  <Component className={`${styles.heading} ${className}`}>
-    {children}
-  </Component>
+  <Component className={`${styles.heading} ${className}`}>{children}</Component>
 )

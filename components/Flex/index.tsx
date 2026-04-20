@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import styles from './index.module.css'
 
 type Props = {
@@ -25,13 +25,23 @@ export const Flex = ({
   wrap = 'nowrap',
 }: Props) => {
   const alignClass = align
-    ? { center: styles.alignCenter, 'flex-end': styles.alignEnd, 'flex-start': styles.alignStart, stretch: styles.alignStretch }[align]
+    ? {
+        center: styles.alignCenter,
+        'flex-end': styles.alignEnd,
+        'flex-start': styles.alignStart,
+        stretch: styles.alignStretch,
+      }[align]
     : styles.alignStart
 
   const directionClass = direction === 'row' ? styles.flexRow : styles.flexColumn
 
   const justifyClass = justify
-    ? { center: styles.justifyCenter, 'flex-end': styles.justifyEnd, 'flex-start': styles.justifyStart, 'space-between': styles.justifyBetween }[justify]
+    ? {
+        center: styles.justifyCenter,
+        'flex-end': styles.justifyEnd,
+        'flex-start': styles.justifyStart,
+        'space-between': styles.justifyBetween,
+      }[justify]
     : styles.justifyStart
 
   const growClass = grow === '1' ? styles.grow1 : styles.grow0

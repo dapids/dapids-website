@@ -13,16 +13,14 @@ export const Education = () => (
       subtitle="Master's Degree in Computer Science"
       title="Háskólinn í Reykjavík"
     >
-      <>
-        In my Master's Degree study path I mainly focused on the following subjects:
-        <List>
-          <li>
-            <Mark>Machine learning</Mark>
-          </li>
-          <li>Virtual environments</li>
-          <li>Human-Computer Interfaces</li>
-        </List>
-      </>
+      In my Master's Degree study path I mainly focused on the following subjects:
+      <List>
+        <li>
+          <Mark>Machine learning</Mark>
+        </li>
+        <li>Virtual environments</li>
+        <li>Human-Computer Interfaces</li>
+      </List>
     </SectionBlock>
 
     <SectionBlock
@@ -31,16 +29,14 @@ export const Education = () => (
       subtitle="Master's Degree in Computer Science"
       title="University of Camerino"
     >
-      <>
-        In my Master's Degree study path I mainly focused on the following subjects:
-        <List>
-          <li>
-            <Mark>Advanced Software Engineering</Mark>
-          </li>
-          <li>Complex System Design</li>
-          <li>Distributed Calculus and Coordination</li>
-        </List>
-      </>
+      In my Master's Degree study path I mainly focused on the following subjects:
+      <List>
+        <li>
+          <Mark>Advanced Software Engineering</Mark>
+        </li>
+        <li>Complex System Design</li>
+        <li>Distributed Calculus and Coordination</li>
+      </List>
     </SectionBlock>
 
     <SectionBlock
@@ -50,17 +46,15 @@ export const Education = () => (
       subtitle="Bachelor's Degree in Computer Science"
       title="University of Urbino"
     >
-      <>
-        In my Bachelor's Degree study path I mainly focused on the following subjects:
-        <List>
-          <li>Programming Languages and Compilers</li>
-          <li>
-            <Mark>Algorithms and Data Structures</Mark>
-          </li>
-          <li>Networks / Internet security</li>
-          <li>Databases</li>
-        </List>
-      </>
+      In my Bachelor's Degree study path I mainly focused on the following subjects:
+      <List>
+        <li>Programming Languages and Compilers</li>
+        <li>
+          <Mark>Algorithms and Data Structures</Mark>
+        </li>
+        <li>Networks / Internet security</li>
+        <li>Databases</li>
+      </List>
     </SectionBlock>
   </>
 )

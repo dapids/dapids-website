@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --project ./tsconfig.json"
+    "typecheck": "tsc --project ./tsconfig.json",
+    "lint": "biome lint app components hooks utils public",
+    "format": "biome format app components hooks utils public",
+    "format:write": "biome format --write app components hooks utils public"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.2",
@@ -20,6 +23,7 @@
     "ts-debounce": "4.0.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
     "@types/next": "9.0.0",
     "@types/node": "24.10.8",
     "@types/react": "18.3.3",

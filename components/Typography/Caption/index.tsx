@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import styles from './index.module.css'
 
 type Props = {
@@ -8,12 +8,7 @@ type Props = {
   weight?: '300' | '400' | '500'
 }
 
-export const Caption = ({
-  as: Component = 'div',
-  children,
-  className = '',
-  weight = '300',
-}: Props) => {
+export const Caption = ({ as: Component = 'div', children, className = '', weight = '300' }: Props) => {
   const classes = [
     styles.caption,
     weight === '300' ? styles.captionWeight300 : weight === '400' ? styles.captionWeight400 : styles.captionWeight500,

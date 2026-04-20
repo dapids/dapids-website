@@ -2,11 +2,11 @@ import { Flex } from 'components/Flex'
 import { Body } from 'components/Typography/Body'
 import { HeadingSmall as HeadingSmallBase } from 'components/Typography/HeadingSmall'
 import { useViewportSize } from 'hooks/useViewportSize'
-import { ReactChild, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import styles from './index.module.css'
 
 type Props = {
-  children: ReactChild
+  children: ReactNode
   last?: boolean
   primaryInformation: ReactNode
   secondaryInformation: ReactNode
@@ -29,7 +29,9 @@ export const SectionBlock = ({
     <Body weight="400" className={last ? styles.wrapperLast : styles.wrapper}>
       <Flex direction="row" wrap={wrap}>
         <Flex basis="360px" grow="0" shrink="0" className={styles.information}>
-          <HeadingSmallBase weight="500" className={styles.headingSmall}>{title}</HeadingSmallBase>
+          <HeadingSmallBase weight="500" className={styles.headingSmall}>
+            {title}
+          </HeadingSmallBase>
           <Body weight="500">{subtitle}</Body>
           <Body>{primaryInformation}</Body>
           <Body>{secondaryInformation}</Body>

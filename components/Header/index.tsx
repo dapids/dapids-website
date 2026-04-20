@@ -1,6 +1,8 @@
+import type { IconDefinition, SizeProp } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faInstagram, faLinkedin, faMedium, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
+import type { ReactNode } from 'react'
 import { Flex } from 'components/Flex'
 import { Link } from 'components/Link'
 import { Body } from 'components/Typography/Body'
@@ -10,7 +12,7 @@ import { useViewportSize } from 'hooks/useViewportSize'
 import styles from './index.module.css'
 
 interface IconLinkProps {
-  children: React.ReactNode
+  children: ReactNode
   href: string
   rel?: string
   small: boolean
@@ -28,8 +30,8 @@ const IconLink = ({ children, href, rel, small, target }: IconLinkProps) => (
   </Link>
 )
 
-const Icon = ({ icon, size }: { icon: any; size: string }) => (
-  <FontAwesomeIcon className={styles.icon} icon={icon} size={size as any} />
+const Icon = ({ icon, size }: { icon: IconDefinition; size: SizeProp }) => (
+  <FontAwesomeIcon className={styles.icon} icon={icon} size={size} />
 )
 
 export const Header = () => {
@@ -43,8 +45,9 @@ export const Header = () => {
   return (
     <Flex align="center" direction={direction} justify="space-between" className={styles.container}>
       <Flex align={leftAlign}>
-        <Display as="h1"> David Sorrentino</Display>
-        <HeadingSmall as="h2">Director of Engineering @ {' '}
+        <Display as="h1">David Sorrentino</Display>
+        <HeadingSmall as="h2">
+          Director of Engineering @{' '}
           <HeadingSmall as="span" weight="500">
             <Link href="//www.prontopro.it" target="_blank">
               ProntoPro
@@ -74,12 +77,7 @@ export const Header = () => {
           <IconLink href="//threads.net/@dapids17" rel="nofollow" small={small} target="_blank">
             <Icon icon={faThreads} size={iconSize} />
           </IconLink>
-          <IconLink
-            href="//twitter.com/dapidsorrentino"
-            rel="nofollow"
-            small={small}
-            target="_blank"
-          >
+          <IconLink href="//twitter.com/dapidsorrentino" rel="nofollow" small={small} target="_blank">
             <Icon icon={faXTwitter} size={iconSize} />
           </IconLink>
         </Flex>

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import styles from './index.module.css'
 
 type Props = {
@@ -9,13 +9,7 @@ type Props = {
   weight?: '300' | '400' | '500'
 }
 
-export const Body = ({
-  as: Component = 'div',
-  children,
-  className = '',
-  fontStyle,
-  weight = '300',
-}: Props) => {
+export const Body = ({ as: Component = 'div', children, className = '', fontStyle, weight = '300' }: Props) => {
   const classes = [
     styles.body,
     fontStyle === 'italic' ? styles.bodyItalic : '',

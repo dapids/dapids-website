@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { debounce } from 'ts-debounce'
 
-const getWindowScroll = () => typeof window === 'undefined' ? 0 : self.scrollY
+const getWindowScroll = () => (typeof window === 'undefined' ? 0 : self.scrollY)
 
 export const useScrollPositionY = () => {
   const [scrollPositionY, setScrollPositionY] = useState(getWindowScroll())
@@ -19,7 +19,7 @@ export const useScrollPositionY = () => {
     return () => {
       self.removeEventListener('scroll', onScroll)
     }
-  }, [])
+  }, [onScroll])
 
   return scrollPositionY
 }

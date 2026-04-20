@@ -29,7 +29,7 @@ export const useViewportSize = () => {
     return () => {
       window.removeEventListener('resize', updateViewportSize)
     }
-  }, [])
+  }, [updateViewportSize])
 
   return viewportSize
 }
