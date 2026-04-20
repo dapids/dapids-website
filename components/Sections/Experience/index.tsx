@@ -112,7 +112,8 @@ const entries: TimelineEntry[] = [
     kind: 'work',
     role: 'Software Consultant',
     organization: 'Sida Group Srl',
-    description: 'Built APIs, middlewares, and internal web applications; optimised legacy systems and hired junior engineers.',
+    description:
+      'Built APIs, middlewares, and internal web applications; optimised legacy systems and hired junior engineers.',
   },
   {
     date: '2013 - 2016',
@@ -157,7 +158,8 @@ const entries: TimelineEntry[] = [
     kind: 'work',
     role: 'Software Engineer Intern',
     organization: 'Computer Sistemi Srl',
-    description: 'Designed and developed enterprise management systems; performed business requirements analysis with stakeholders.',
+    description:
+      'Designed and developed enterprise management systems; performed business requirements analysis with stakeholders.',
   },
   {
     date: '2006 - 2010',

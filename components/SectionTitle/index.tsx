@@ -5,6 +5,8 @@ import { makeKebabCase } from 'utils/makeKebabCase'
 export const SectionTitle = ({ children }: { children: string }) => (
   <>
     <div id={makeKebabCase(children)} className={styles.anchor}></div>
-    <HeadingBase className={styles.heading}>{children}</HeadingBase>
+    <HeadingBase as="h2" className={styles.heading}>
+      {children}
+    </HeadingBase>
   </>
 )
