@@ -1,11 +1,81 @@
-.paragraph {
-  margin-bottom: 0;
+.timeline {
+  list-style: none;
+  margin: 0 0 48px;
+  padding: 0 0 0 24px;
+  border-left: 2px dashed #ccc;
 }
 
-.paragraphFirst {
-  margin-top: 0;
+.item {
+  position: relative;
+  padding: 0 0 40px 28px;
 }
 
-.paragraphNotFirst {
-  margin-top: 16px;
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.dot {
+  position: absolute;
+  left: -25px; /* empirically centred on the dashed border */
+  top: 0.9em;
+  transform: translateX(-50%) translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fefefe;
+  outline: 2px solid #888;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.itemEducation .tag {
+  color: #aaa;
+}
+
+.itemTalk .tag {
+  color: #6f7f8f;
+}
+
+.date {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #888;
+  margin: 0 0 4px;
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.organization {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+  color: #444;
+}
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.resources {
+  margin: 10px 0 0;
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
