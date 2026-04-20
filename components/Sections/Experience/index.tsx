@@ -2,16 +2,18 @@ import { List } from 'components/List'
 import { SectionBlock } from 'components/SectionBlock'
 import { SectionTitle } from 'components/SectionTitle'
 import { Mark } from 'components/Typography/Mark'
-import styled from 'styled-components'
+import styles from './index.module.css'
 
-type ParagraphProps = {
+interface ParagraphProps {
+  children: React.ReactNode
   first?: boolean
 }
 
-const Paragraph = styled.div<ParagraphProps>`
-  margin-bottom: 0;
-  margin-top: ${({ first }) => (first ? '0' : '16px')};
-`
+const Paragraph = ({ children, first }: ParagraphProps) => (
+  <div className={first ? styles.paragraphFirst : styles.paragraphNotFirst}>
+    {children}
+  </div>
+)
 
 export const Experience = () => (
   <>

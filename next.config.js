@@ -1,5 +1,1 @@
-module.exports = {
-  compiler: {
-    styledComponents: true,
-  },
-}
+module.exports = {}

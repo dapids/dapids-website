@@ -6,10 +6,10 @@ const getWindowScroll = () => typeof window === 'undefined' ? 0 : self.scrollY
 export const useScrollPositionY = () => {
   const [scrollPositionY, setScrollPositionY] = useState(getWindowScroll())
 
-  const onScroll: EventListener = useCallback(
+  const onScroll = useCallback(
     debounce(() => {
       setScrollPositionY(getWindowScroll())
-    }, 50),
+    }, 50) as unknown as EventListener,
     [],
   )
 

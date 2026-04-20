@@ -1,0 +1,11 @@
+.paragraph {
+  margin-bottom: 0;
+}
+
+.paragraphFirst {
+  margin-top: 0;
+}
+
+.paragraphNotFirst {
+  margin-top: 16px;
+}

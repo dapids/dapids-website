@@ -1,7 +1,11 @@
-import styled from 'styled-components'
+import { ReactNode } from 'react'
+import styles from './index.module.css'
 
-export const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 16px;
-`
+type Props = {
+  children: ReactNode
+  className?: string
+}
+
+export const Container = ({ children, className = '' }: Props) => (
+  <div className={`${styles.container} ${className}`}>{children}</div>
+)

@@ -6,6 +6,6 @@ type Props = {
   className?: string
 }
 
-export const List = ({ children, className = '' }: Props) => (
-  <ul className={`${styles.list} ${className}`}>{children}</ul>
+export const Mark = ({ children, className = '' }: Props) => (
+  <mark className={`${styles.mark} ${className}`}>{children}</mark>
 )

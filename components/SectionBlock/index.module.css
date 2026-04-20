@@ -1,0 +1,41 @@
+.wrapper {
+  margin-bottom: 32px;
+  margin-top: 0;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.wrapperLast {
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.wrapper::after {
+  border-bottom: 1px dashed #aaa;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.wrapperLast::after {
+  display: none;
+}
+
+.information {
+  margin-bottom: 16px;
+}
+
+.detailSmall {
+  padding-left: 0;
+}
+
+.detailLarge {
+  padding-left: 48px;
+}
+
+.headingSmall {
+  margin-bottom: 0px;
+}

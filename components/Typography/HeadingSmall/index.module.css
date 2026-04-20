@@ -1,0 +1,23 @@
+.headingSmall {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.headingSmallItalic {
+  font-style: italic;
+}
+
+.headingSmallWeight300 {
+  font-weight: 300;
+}
+
+.headingSmallWeight400 {
+  font-weight: 400;
+}
+
+.headingSmallWeight500 {
+  font-weight: 500;
+}

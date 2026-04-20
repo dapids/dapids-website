@@ -7,44 +7,30 @@ import { Body } from 'components/Typography/Body'
 import { Display } from 'components/Typography/Display'
 import { HeadingSmall } from 'components/Typography/HeadingSmall'
 import { useViewportSize } from 'hooks/useViewportSize'
-import styled from 'styled-components'
+import styles from './index.module.css'
 
-const Container = styled(Flex)`
-  padding: 32px 0 24px;
-`
-
-const IconsContainer = styled(Flex)`
-  margin: 24px 0;
-`
-
-type IconLinkProps = {
+interface IconLinkProps {
+  children: React.ReactNode
+  href: string
+  rel?: string
   small: boolean
+  target?: string
 }
 
-const IconLink = styled(Link)<IconLinkProps>`
-  align-items: center;
-  border: 2px solid #e6e6e6;
-  border-radius: 50%;
-  background: #e6e6e6;
-  box-shadow: inset 0 0 0 0px #222;
-  color: #222;
-  display: flex;
-  height: ${({ small }) => (small ? '40px' : '55px')};
-  justify-content: center;
-  line-height: ${({ small }) => (small ? '40px' : '55px')};
-  margin: ${({ small }) => (small ? '0 4px' : '0 0 0 16px')};
-  transition: all 0.3s;
-  width: ${({ small }) => (small ? '40px' : '55px')};
+const IconLink = ({ children, href, rel, small, target }: IconLinkProps) => (
+  <Link
+    className={`${styles.iconLink} ${small ? styles.iconLinkSmall : styles.iconLinkLarge}`}
+    href={href}
+    rel={rel}
+    target={target}
+  >
+    {children}
+  </Link>
+)
 
-  &:hover {
-    box-shadow: inset 0 0 0 35px #222;
-    color: #e6e6e6;
-  }
-`
-
-const Icon = styled(FontAwesomeIcon)`
-  height: 30px;
-`
+const Icon = ({ icon, size }: { icon: any; size: string }) => (
+  <FontAwesomeIcon className={styles.icon} icon={icon} size={size as any} />
+)
 
 export const Header = () => {
   const viewportSize = useViewportSize()
@@ -55,7 +41,7 @@ export const Header = () => {
   const iconSize = small ? '1x' : '3x'
 
   return (
-    <Container align="center" as="header" direction={direction} justify="space-between">
+    <Flex align="center" direction={direction} justify="space-between" className={styles.container}>
       <Flex align={leftAlign}>
         <Display as="h1"> David Sorrentino</Display>
         <HeadingSmall as="h2">Director of Engineering @ {' '}
@@ -69,7 +55,7 @@ export const Header = () => {
       </Flex>
 
       <Flex align={rightAlign}>
-        <IconsContainer direction="row">
+        <Flex direction="row" className={styles.iconsContainer}>
           <IconLink href="//koalendar.com/e/meet-with-dapids" rel="nofollow" small={small} target="_blank">
             <Icon icon={faCalendarCheck} size={iconSize} />
           </IconLink>
@@ -96,10 +82,10 @@ export const Header = () => {
           >
             <Icon icon={faXTwitter} size={iconSize} />
           </IconLink>
-        </IconsContainer>
+        </Flex>
 
         <Body>Current location: Rome - Italy</Body>
       </Flex>
-    </Container>
+    </Flex>
   )
 }

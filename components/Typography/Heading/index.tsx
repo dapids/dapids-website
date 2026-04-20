@@ -1,0 +1,14 @@
+import { ReactNode } from 'react'
+import styles from './index.module.css'
+
+type Props = {
+  as?: 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  children: ReactNode
+  className?: string
+}
+
+export const Heading = ({ as: Component = 'div', children, className = '' }: Props) => (
+  <Component className={`${styles.heading} ${className}`}>
+    {children}
+  </Component>
+)

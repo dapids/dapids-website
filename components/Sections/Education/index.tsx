@@ -1,10 +1,7 @@
-import { Flex } from 'components/Flex'
 import { List } from 'components/List'
 import { SectionBlock } from 'components/SectionBlock'
 import { SectionTitle } from 'components/SectionTitle'
-import { Body } from 'components/Typography/Body'
 import { Mark } from 'components/Typography/Mark'
-import styled from 'styled-components'
 
 export const Education = () => (
   <>

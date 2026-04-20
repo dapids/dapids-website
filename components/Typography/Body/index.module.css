@@ -1,0 +1,21 @@
+.body {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.bodyItalic {
+  font-style: italic;
+}
+
+.bodyWeight300 {
+  font-weight: 300;
+}
+
+.bodyWeight400 {
+  font-weight: 400;
+}
+
+.bodyWeight500 {
+  font-weight: 500;
+}

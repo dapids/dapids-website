@@ -3,47 +3,7 @@ import { Body } from 'components/Typography/Body'
 import { HeadingSmall as HeadingSmallBase } from 'components/Typography/HeadingSmall'
 import { useViewportSize } from 'hooks/useViewportSize'
 import { ReactChild, ReactNode } from 'react'
-import styled from 'styled-components'
-
-type WrapperProps = {
-  last?: boolean
-}
-
-const Wrapper = styled(Body).attrs({
-  weight: '400',
-})<WrapperProps>`
-  margin-bottom: ${({ last }) => (last ? '0' : '32px')};
-  margin-top: 0;
-  padding-bottom: ${({ last }) => (last ? '16px' : '32px')};
-  position: relative;
-
-  &::after {
-    border-bottom: 1px dashed #aaa;
-    bottom: 0;
-    content: '';
-    display: ${({ last }: WrapperProps) => (last ? 'none' : 'visible')};
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-`
-
-const Information = styled(Flex)`
-  margin-bottom: 16px;
-`
-
-type DetailProps = {
-  small: boolean
-}
-
-const Detail = styled(Flex)<DetailProps>`
-  padding-left: ${({ small }) => small ? '0' : '48px'};
-`
-
-const HeadingSmall = styled(HeadingSmallBase)`
-  margin-bottom: 0px;
-`
+import styles from './index.module.css'
 
 type Props = {
   children: ReactChild
@@ -66,19 +26,19 @@ export const SectionBlock = ({
   const wrap = viewportSize === 'small' ? 'wrap' : 'nowrap'
 
   return (
-    <Wrapper last={last}>
+    <Body weight="400" className={last ? styles.wrapperLast : styles.wrapper}>
       <Flex direction="row" wrap={wrap}>
-        <Information basis="360px" grow="0" shrink="0">
-          <HeadingSmall weight="500">{title}</HeadingSmall>
+        <Flex basis="360px" grow="0" shrink="0" className={styles.information}>
+          <HeadingSmallBase weight="500" className={styles.headingSmall}>{title}</HeadingSmallBase>
           <Body weight="500">{subtitle}</Body>
           <Body>{primaryInformation}</Body>
           <Body>{secondaryInformation}</Body>
-        </Information>
+        </Flex>
 
-        <Detail grow="1" shrink="1" small={viewportSize === 'small'}>
+        <Flex grow="1" shrink="1" className={viewportSize === 'small' ? styles.detailSmall : styles.detailLarge}>
           {children}
-        </Detail>
+        </Flex>
       </Flex>
-    </Wrapper>
+    </Body>
   )
 }

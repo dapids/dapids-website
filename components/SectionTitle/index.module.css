@@ -1,0 +1,29 @@
+.anchor {
+  padding-bottom: 52px;
+}
+
+.heading {
+  margin-bottom: 48px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.heading::before,
+.heading::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.heading::before {
+  border-top: 2px dashed #ccc;
+  top: 0;
+}
+
+.heading::after {
+  border-bottom: 2px dashed #ccc;
+  bottom: 0;
+}

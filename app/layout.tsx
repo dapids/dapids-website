@@ -1,9 +1,9 @@
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import './globals.css'
 import { Metadata } from 'next'
 import Head from 'next/head'
 import { GoogleAnalytics } from '@next/third-parties/google'
-import StyledComponentsRegistry from '../lib/registry'
 
 config.autoAddCss = false
 
@@ -22,9 +22,7 @@ export default function RootLayout({
         ></link>
       </Head>
       <body>
-        <StyledComponentsRegistry>
-          {children}
-        </StyledComponentsRegistry>
+        {children}
       </body>
       <GoogleAnalytics gaId="G-45MY60P46E" />
     </html>

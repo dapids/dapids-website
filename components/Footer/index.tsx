@@ -1,17 +1,10 @@
 import { Caption } from 'components/Typography/Caption'
-import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  border-top: 2px dashed #e6e6e6;
-  margin-top: 32px;
-  padding: 32px 48px 16px;
-  text-align: center;
-`
+import styles from './index.module.css'
 
 export const Footer = () => (
-  <Wrapper>
+  <div className={styles.wrapper}>
     <Caption as="span" weight="400">
-      This website was baked with ❤️, TypeScript, React, styled-components, and Next.js.
+      This website was baked with ❤️, TypeScript, React, CSS Modules, and Next.js.
     </Caption>
-  </Wrapper>
+  </div>
 )
