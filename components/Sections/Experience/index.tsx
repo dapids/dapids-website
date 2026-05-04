@@ -171,7 +171,7 @@ const entries: TimelineEntry[] = [
 ]
 
 export const Experience = () => (
-  <>
+  <section aria-labelledby="my-journey">
     <SectionTitle>My Journey</SectionTitle>
 
     <ul className={styles.timeline}>
@@ -182,7 +182,9 @@ export const Experience = () => (
         >
           <div className={styles.dot} />
           <span className={styles.tag}>{kind === 'education' ? 'Education' : kind === 'talk' ? 'Talk' : 'Work'}</span>
-          <p className={styles.date}>{date}</p>
+          <p className={styles.date}>
+            <time>{date}</time>
+          </p>
           <h3 className={styles.role}>{role}</h3>
           <p className={styles.organization}>{organization}</p>
           <p className={styles.description}>{description}</p>
@@ -201,5 +203,5 @@ export const Experience = () => (
         </li>
       ))}
     </ul>
-  </>
+  </section>
 )

@@ -18,9 +18,38 @@ const roboto = Roboto({
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': 'https://davidsorrentino.com/#person',
   name: 'David Sorrentino',
   url: 'https://davidsorrentino.com',
   jobTitle: 'Director of Engineering',
+  image: 'https://davidsorrentino.com/me.png',
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'University of Camerino',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'University of Urbino',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Reykjavik University',
+    },
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'ProntoPro',
+    url: 'https://www.prontopro.it',
+  },
+  knowsAbout: [
+    'Software Engineering',
+    'Engineering Management',
+    'TypeScript',
+    'React',
+    'Clean Code',
+    'System Design',
+  ],
   sameAs: [
     'https://github.com/dapids',
     'https://linkedin.com/in/dapids',
@@ -31,6 +60,36 @@ const personJsonLd = {
   ],
 }
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://davidsorrentino.com/#website',
+  url: 'https://davidsorrentino.com',
+  name: 'David Sorrentino',
+  description:
+    'Personal website of David Sorrentino, Director of Engineering and Software Engineer focused on clean code, architecture, and engineering leadership.',
+  inLanguage: 'en-US',
+  publisher: {
+    '@id': 'https://davidsorrentino.com/#person',
+  },
+}
+
+const profilePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': 'https://davidsorrentino.com/#profile-page',
+  url: 'https://davidsorrentino.com',
+  name: 'David Sorrentino - Software Engineer',
+  description:
+    'Career timeline, background, and social profiles of David Sorrentino, Director of Engineering.',
+  isPartOf: {
+    '@id': 'https://davidsorrentino.com/#website',
+  },
+  mainEntity: {
+    '@id': 'https://davidsorrentino.com/#person',
+  },
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -38,6 +97,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Script id="person-jsonld" type="application/ld+json">
           {JSON.stringify(personJsonLd)}
+        </Script>
+        <Script id="website-jsonld" type="application/ld+json">
+          {JSON.stringify(websiteJsonLd)}
+        </Script>
+        <Script id="profile-page-jsonld" type="application/ld+json">
+          {JSON.stringify(profilePageJsonLd)}
         </Script>
         <GoogleAnalytics gaId="G-45MY60P46E" />
       </body>
@@ -47,15 +112,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://davidsorrentino.com'),
+  applicationName: 'David Sorrentino',
   title: {
     default: 'David Sorrentino - Software Engineer',
     template: '%s | David Sorrentino',
   },
   description:
     'Software Engineer especially passionate about clean code, functional programming, and engineering management.',
+  keywords: [
+    'David Sorrentino',
+    'Software Engineer',
+    'Director of Engineering',
+    'Engineering Manager',
+    'TypeScript',
+    'React',
+    'Clean Code',
+    'Software Architecture',
+  ],
+  category: 'technology',
+  authors: [{ name: 'David Sorrentino', url: 'https://davidsorrentino.com' }],
+  creator: 'David Sorrentino',
+  publisher: 'David Sorrentino',
   alternates: {
     canonical: '/',
   },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  referrer: 'origin-when-cross-origin',
   robots: {
     index: true,
     follow: true,
@@ -66,6 +152,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
       'max-video-preview': -1,
     },
+  },
+  other: {
+    'theme-color': '#fefefe',
   },
   openGraph: {
     type: 'website',

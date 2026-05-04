@@ -6,14 +6,14 @@ import { Mark } from 'components/Typography/Mark'
 import { useViewportSize } from 'hooks/useViewportSize'
 import styles from './index.module.css'
 
-const yearsOfExperience = new Date().getFullYear() - 2006
+const yearsOfExperience = new Date().getFullYear() - 2008
 
 export const AboutMe = () => {
   const viewportSize = useViewportSize()
   const direction = viewportSize === 'small' ? 'column' : 'row'
 
   return (
-    <>
+    <section aria-labelledby="about-me">
       <SectionTitle>About me</SectionTitle>
       <Flex direction={direction}>
         <Flex shrink="0" className={styles.pictureWrapper}>
@@ -45,6 +45,6 @@ export const AboutMe = () => {
           </Body>
         </Flex>
       </Flex>
-    </>
+    </section>
   )
 }

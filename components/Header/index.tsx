@@ -49,35 +49,38 @@ export const Header = () => {
         <HeadingSmall as="h2">
           Director of Engineering @{' '}
           <HeadingSmall as="span" weight="500">
-            <Link href="//www.prontopro.it" target="_blank">
+            <Link href="https://www.prontopro.it" target="_blank">
               ProntoPro
             </Link>
           </HeadingSmall>
         </HeadingSmall>
+        <Body>
+          <Link href="#about-me">About me</Link> · <Link href="#my-journey">My journey</Link>
+        </Body>
         <Body>Dreamer, hugger, karma-believer</Body>
       </Flex>
 
       <Flex align={rightAlign}>
         <Flex direction="row" className={styles.iconsContainer}>
-          <IconLink href="//koalendar.com/e/meet-with-dapids" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://koalendar.com/e/meet-with-dapids" rel="nofollow" small={small} target="_blank">
             <Icon icon={faCalendarCheck} size={iconSize} />
           </IconLink>
-          <IconLink href="//linkedin.com/in/dapids" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://linkedin.com/in/dapids" rel="nofollow" small={small} target="_blank">
             <Icon icon={faLinkedin} size={iconSize} />
           </IconLink>
-          <IconLink href="//medium.com/@dapids17" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://medium.com/@dapids17" rel="nofollow" small={small} target="_blank">
             <Icon icon={faMedium} size={iconSize} />
           </IconLink>
-          <IconLink href="//github.com/dapids" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://github.com/dapids" rel="nofollow" small={small} target="_blank">
             <Icon icon={faGithub} size={iconSize} />
           </IconLink>
-          <IconLink href="//instagram.com/dapids17" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://instagram.com/dapids17" rel="nofollow" small={small} target="_blank">
             <Icon icon={faInstagram} size={iconSize} />
           </IconLink>
-          <IconLink href="//threads.net/@dapids17" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://threads.net/@dapids17" rel="nofollow" small={small} target="_blank">
             <Icon icon={faThreads} size={iconSize} />
           </IconLink>
-          <IconLink href="//twitter.com/dapidsorrentino" rel="nofollow" small={small} target="_blank">
+          <IconLink href="https://twitter.com/dapidsorrentino" rel="nofollow" small={small} target="_blank">
             <Icon icon={faXTwitter} size={iconSize} />
           </IconLink>
         </Flex>

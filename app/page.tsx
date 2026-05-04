@@ -5,22 +5,27 @@ import { Footer } from 'components/Footer'
 import { Header } from 'components/Header'
 import { AboutMe } from 'components/Sections/AboutMe'
 import { Experience } from 'components/Sections/Experience'
-import React from 'react'
 
 export default function Home() {
   return (
-    <React.StrictMode>
+    <>
       <Container>
-        <Header />
+        <header>
+          <Header />
+        </header>
 
-        <AboutMe />
+        <main>
+          <AboutMe />
 
-        <Experience />
+          <Experience />
+        </main>
 
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </Container>
 
       <BackToTop />
-    </React.StrictMode>
+    </>
   )
 }
