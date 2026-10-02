@@ -22,7 +22,7 @@ const personJsonLd = {
   name: 'David Sorrentino',
   url: 'https://davidsorrentino.com',
   jobTitle: 'Director of Engineering',
-  image: 'https://davidsorrentino.com/me.png',
+  image: 'https://davidsorrentino.com/me.jpg',
   alumniOf: [
     {
       '@type': 'CollegeOrUniversity',
@@ -166,7 +166,7 @@ export const metadata: Metadata = {
       'Software Engineer especially passionate about clean code, functional programming, and engineering management.',
     images: [
       {
-        url: '/me.png',
+        url: '/me.jpg',
         width: 1200,
         height: 630,
         alt: 'David Sorrentino',
@@ -179,7 +179,7 @@ export const metadata: Metadata = {
     title: 'David Sorrentino - Software Engineer',
     description:
       'Software Engineer especially passionate about clean code, functional programming, and engineering management.',
-    images: ['/me.png'],
+    images: ['/me.jpg'],
   },
   icons: {
     icon: [
