@@ -2,7 +2,7 @@ import { Link } from 'components/Link'
 import { SectionTitle } from 'components/SectionTitle'
 import styles from './index.module.css'
 
-type Kind = 'work' | 'education' | 'talk'
+type Kind = 'work' | 'education'
 
 interface TimelineResource {
   href: string
@@ -28,52 +28,12 @@ const entries: TimelineEntry[] = [
       'Shaped the technology strategy across multiple squads, hired and grew the engineering organization, and led the transition to a modern platform stack.',
   },
   {
-    date: '17/06/2020',
-    kind: 'talk',
-    role: 'React - Write once, run everywhere',
-    organization: 'RomaJS community',
-    description:
-      'Explained how we managed a single codebase for multiple platforms at ProntoPro, including trade-offs and maintenance costs. The talk is in Italian and the slides are in English.',
-    resources: [
-      {
-        href: 'https://www.meetup.com/en-AU/RomaJS/events/271172942/',
-        label: 'Event',
-      },
-      {
-        href: 'https://docs.google.com/presentation/d/185CijvlYu9Ia5ZT0pDnKhnzCQ96JS2zm3juGNYj2Qcw/',
-        label: 'Slides',
-      },
-      {
-        href: 'https://www.youtube.com/watch?v=bJujIiTK5PQ&t=579s',
-        label: 'Video',
-      },
-    ],
-  },
-  {
     date: '2018 - 2021',
     kind: 'work',
     role: 'Technical Lead',
     organization: 'ProntoPro',
     description:
       "Owned the squad's architectural decisions, mentored engineers, and introduced practices that cut release cycle time in half.",
-  },
-  {
-    date: '02/10/2018',
-    kind: 'talk',
-    role: 'React as a bridge between UX and development',
-    organization: 'Intersection Conference',
-    description:
-      'Designers and developers tend to look at UI components differently. In this talk I shared how React helped ProntoPro align both perspectives.',
-    resources: [
-      {
-        href: 'https://milano2018.intersection-conference.eu/react-ux-development',
-        label: 'Event',
-      },
-      {
-        href: 'https://www.youtube.com/watch?v=J74_lvROKqc',
-        label: 'Video',
-      },
-    ],
   },
   {
     date: '2017 - 2021',
@@ -178,10 +138,10 @@ export const Experience = () => (
       {entries.map(({ date, kind, role, organization, description, resources }) => (
         <li
           key={`${kind}-${date}-${role}-${organization}`}
-          className={`${styles.item} ${kind === 'education' ? styles.itemEducation : ''} ${kind === 'talk' ? styles.itemTalk : ''}`}
+          className={`${styles.item} ${kind === 'education' ? styles.itemEducation : ''}`}
         >
           <div className={styles.dot} />
-          <span className={styles.tag}>{kind === 'education' ? 'Education' : kind === 'talk' ? 'Talk' : 'Work'}</span>
+          <span className={styles.tag}>{kind === 'education' ? 'Education' : 'Work'}</span>
           <p className={styles.date}>
             <time>{date}</time>
           </p>
